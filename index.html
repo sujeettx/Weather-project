@@ -1,24 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Weather App</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="shortcut icon" href="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.V7i9qNORcwByoSSXlGDbCwAAAA%26pid%3DApi&f=1&ipt=9136323a30c95c1c9911b8ebfe9fa8babad7397388fd6e9ff07c8756fe956e14&ipo=images" type="image/x-icon">
-  </head>
-  <body>
-    <div class="main-card">
-      <div class="card-1">
-        <input id="input-btn" type="text" placeholder="Enter your city" /><br>
-        <button id="search-btn">Search</button>
-      </div>
-      <div class="card-2">
-        <h4 id="city-name">London, England</h4><br>
-        <h3 id="city-time">23:34</h3><br>
-        <h3 id="city-temp">13°C</h3><br>
-      </div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.10/css/weather-icons.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Search Section -->
+        <div class="search-section">
+            <div class="search-bar">
+                <i class="wi wi-day-sunny search-icon"></i>
+                <input type="text" placeholder="Search for places ..." autofocus>
+            </div>
+            <button class="refresh-btn">
+                <i class="wi wi-refresh"></i>
+            </button>
+        </div>
+
+        <!-- Navigation -->
+        <nav class="nav-tabs">
+            <button class="active">Today</button>
+            <button>Week</button>
+        </nav>
+
+        <!-- Main Weather Info -->
+        <div class="current-weather">
+            <div class="weather-main">
+                <div class="weather-icon">
+                    <i class="wi wi-day-sunny"></i>
+                </div>
+                <div class="temp-container">
+                    <div class="temperature">--°C</div>
+                    <div class="datetime">Loading...</div>
+                </div>
+            </div>
+            
+            <div class="weather-details">
+                <div class="condition">
+                    <i class="wi wi-cloud"></i>
+                    <span>Loading...</span>
+                </div>
+                <div class="precipitation">
+                    <i class="wi wi-raindrops"></i>
+                    <span>--</span>
+                </div>
+            </div>
+            
+            <div class="location">
+                <i class="wi wi-time-1"></i>
+                <span>Loading...</span>
+            </div>
+        </div>
+
+        <!-- Today's Highlights -->
+        <h2>Today's Highlights</h2>
+        <div class="highlights-grid">
+            <div class="highlight-card uv-card">
+                <h3>UV Index</h3>
+                <div class="uv-meter">
+                    <div class="uv-value">--</div>
+                    <div class="uv-scale">
+                        <div class="uv-indicator"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="highlight-card wind-card">
+                <h3>Wind Status</h3>
+                <div class="wind-info">
+                    <i class="wi wi-strong-wind"></i>
+                    <div class="wind-value">--</div>
+                    <div class="wind-unit">km/h</div>
+                    <div class="wind-direction">
+                        <i class="wi wi-wind-direction"></i>
+                        <span>--</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="highlight-card humidity-card">
+                <h3>Humidity</h3>
+                <div class="humidity-info">
+                    <i class="wi wi-humidity"></i>
+                    <div class="humidity-value">--%</div>
+                    <div class="humidity-status">--</div>
+                </div>
+            </div>
+
+            <div class="highlight-card air-quality">
+                <h3>Air Quality</h3>
+                <div class="aqi-info">
+                    <i class="wi wi-dust"></i>
+                    <div class="highlight-value">--</div>
+                    <div class="highlight-status">--</div>
+                </div>
+            </div>
+        </div>
     </div>
+    
     <script src="app.js"></script>
-  </body>
+</body>
 </html>
