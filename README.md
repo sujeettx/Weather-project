@@ -23,32 +23,27 @@ git clone https://github.com/your-username/weather-app.git
 cd weather-app
 ```
 
-### 2. Install Dependencies (if any)
+### 2. Install Dependencies
 
-This project uses only vanilla JavaScript, so no additional dependencies are required.
+This project requires `dotenv` for environment variable management. Install it using:
 
-### 3. Create Configuration File
-
-- Create a new file named `config.js` in the root directory.
-
-### 4. Configuration
-
-- Open `config.js` and replace the `API_KEY` with your actual key:
-
-```js
-// Config
-const CONFIG = {
-    API_KEY: 'your_api_key_here',  
-    BASE_URL: 'https://api.weatherapi.com/v1',
-    DEFAULT_LOCATION: 'London'
-};
-
-module.exports = CONFIG;
+```sh
+npm install dotenv
 ```
 
-- **Note**: The `config.js` file is added to `.gitignore` to prevent exposing the API key publicly.
+### 3. Create `.env` File
 
-### 5. Run the Application
+Create a `.env` file in the root directory and add your API key:
+
+```env
+API_KEY=your_api_key_here
+BASE_URL=https://api.weatherapi.com/v1
+DEFAULT_LOCATION=London
+```
+
+- **Note**: The `.env` file is added to `.gitignore` to prevent exposing the API key publicly.
+
+### 4. Run the Application
 
 Simply open the `index.html` file in your browser to run the application.
 
@@ -56,11 +51,11 @@ Simply open the `index.html` file in your browser to run the application.
 
 ```
 weather-app/
-│-- assets/
-│   ├── styles.css
-│-- config.js (ignored in .gitignore)
+│-- styles.css
 │-- app.js
 │-- index.html
+|-- config.js
+│-- .env (ignored in .gitignore)
 │-- .gitignore
 │-- README.md
 ```
