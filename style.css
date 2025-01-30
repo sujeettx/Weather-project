@@ -254,3 +254,49 @@ body {
 .fade-in {
     animation: fadeIn 0.5s ease-in;
 }
+.message {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    min-width: 300px;
+    padding: 15px;
+    border-radius: 8px;
+    z-index: 1000;
+    animation: slideIn 0.3s ease-in-out;
+    color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.message.success {
+    background-color: #4CAF50;
+}
+
+.message.error {
+    background-color: #f44336;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+}
+
+.message.fade-out {
+    animation: fadeOut 0.3s ease-in-out forwards;
+}
