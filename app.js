@@ -1,4 +1,6 @@
 const CONFIG = require('./config');
+console.log(CONFIG);
+
 // Weather icon mapping object
 const WEATHER_ICONS = {
   'clear': 'wi-day-sunny',
