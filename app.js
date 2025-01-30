@@ -1,10 +1,4 @@
-// Config
-const CONFIG = {
-  API_KEY: '2a076f927ed74dfa9a794530240108',
-  BASE_URL: 'https://api.weatherapi.com/v1',
-  DEFAULT_LOCATION: 'London'
-};
-
+const CONFIG = require('./config');
 // Weather icon mapping object
 const WEATHER_ICONS = {
   'clear': 'wi-day-sunny',
